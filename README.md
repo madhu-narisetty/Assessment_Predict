@@ -27,7 +27,7 @@ Instructions:
     
 10. Create firewall rule to allow the traffic on the nodeport(31115) (get the nodeport if you have not explicitely mentioned in the config)
     
-    gcloud compute firewall-rules create gke-node-port --network=<gcp-network-interview> --allow tcp:31115,udp:31115
+    gcloud compute firewall-rules create gke-node-port --network=<gke-network-interview>       --allow tcp:31115,udp:31115
     
 11. Once port is allowed and all the k8s objects are created then test the db connectivity from local machine(psql client to be installed)/cloud shell
     
