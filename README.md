@@ -15,7 +15,9 @@ Instructions:
     terraform plan
     terraform apply
 7. Once cluster is provisioned successfully then get the connectoin command (something like below)
+   
    gcloud container clusters get-credentials <clustername> --zone <zone ID> --project <Project ID>
+    
 8. Launch cloudshell and login to the cluster with above command
   
 **Postgres DB Deployment:**
@@ -28,10 +30,15 @@ Instructions:
     psql -h <Node External IP> -p 31115 -U piuser -d predictx
 12. You can create the tables as you need to test
   
-**Information:
-============**
+**Information: **    
+
 
 1. GKE Nodepool has been configured as minimum 1 and max 3. Please update according to your view point.
 2. VPC & Subnets are created with some random CIDR ranges. Update according to your needs
 3. Change the Terraform resource names if needed.
-4. 
+
+    
+**Clean the deployment and cluster :**
+    
+1. kubectl delete -f <filename.yaml>
+2. terraform destroy
