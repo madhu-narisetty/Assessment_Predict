@@ -6,11 +6,12 @@ Instructions:
 **Terraform Code and Cluster Deployment:**
 
 1. Have your own service account credentials key file.
-2. Update/Replace the provider block with credentials file absolute path wherever it is needed.
-3. Create a GCS bucket with name of your choice.
-4. Update backend configuration with bucket details.
-5. Have necessary/appropirate IAM roles are attached to the service account.
-6. Have the complete code ready and perform below actions:
+2. Download the modules for GKE cluster nd VPC network and keep them in local directoy while doing a terraform init.
+3. Update/Replace the provider block with credentials file absolute path wherever it is needed.
+4. Create a GCS bucket with name of your choice.
+5. Update backend configuration with bucket details.
+6. Have necessary/appropirate IAM roles are attached to the service account.
+7. Have the complete code ready and perform below actions:
     terraform init
     terraform plan
     terraform apply
